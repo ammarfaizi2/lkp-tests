@@ -2,7 +2,7 @@ pkgname=vmem
 pkgver=git
 pkgrel=1
 url='https://github.com/pmem/vmem'
-arch=('i386' 'x86_64')
+arch=('i386' 'x86_64' 'aarch64')
 license=('Intel' 'Apache 2.0' 'BSD' 'GPL 2.1' )
 source=(
 	'https://github.com/pmem/vmem.git'

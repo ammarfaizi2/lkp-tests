@@ -1,7 +1,7 @@
 pkgname=netperf
 pkgver=2.7
 pkgrel=0
-arch=('i386' 'x86_64' 'riscv64')
+arch=('i386' 'x86_64' 'riscv64' 'aarch64')
 url="https://github.com/HewlettPackard/netperf"
 license=('GPL')
 source=("https://github.com/HewlettPackard/netperf/archive/netperf-$pkgver.$pkgrel.tar.gz" "http://savannah.gnu.org/cgi-bin/viewcvs/*checkout*/config/config/config.guess" "http://savannah.gnu.org/cgi-bin/viewcvs/*checkout*/config/config/config.sub")

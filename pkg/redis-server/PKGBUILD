@@ -1,7 +1,7 @@
 pkgname=redis
 pkgver=6.2.8
 pkgrel=0
-arch=('i386' 'x86_64')
+arch=('i386' 'x86_64' 'aarch64')
 url="https://redis.io"
 license=('BSD')
 depends=()

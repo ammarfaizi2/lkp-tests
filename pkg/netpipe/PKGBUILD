@@ -9,7 +9,7 @@ url="https://fossies.org/linux/privat/NetPIPE-5.1.4.tar.gz"
 depends=()
 optdepends=('tcsh: for nplaunch script')
 source=(https://fossies.org/linux/privat/NetPIPE-$pkgver.tar.gz)
-arch=('i386' 'x86_64')
+arch=('i386' 'x86_64' 'aarch64')
 license=('GPL')
 sha256sums=('738abeb9665877332d4b0cada2f15f766259809d0e31a29e327bfbf86b7e0183')
 

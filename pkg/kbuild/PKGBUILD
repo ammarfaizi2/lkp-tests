@@ -1,7 +1,7 @@
 pkgname=kbuild
 pkgver=5.4
 pkgrel=1
-arch=('i386' 'x86_64')
+arch=('i386' 'x86_64' 'aarch64')
 url="https://www.kernel.org/pub/linux/kernel"
 license=('GPL')
 source=("https://www.kernel.org/pub/linux/kernel/v5.x/linux-${pkgver}.tar.xz")

@@ -1,7 +1,7 @@
 pkgname=xsave-test
 pkgver=git
 pkgrel=1
-arch=('i386' 'x86_64')
+arch=('i386' 'x86_64' 'aarch64')
 url="https://github.com/yyu168/xsave_test"
 source=('xsave-test'::'https://github.com/yyu168/xsave_test.git')
 md5sums=('SKIP')

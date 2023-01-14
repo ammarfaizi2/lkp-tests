@@ -1,7 +1,7 @@
 pkgname=kvm-unit-tests
 pkgver=git
 pkgrel=1
-arch=('i386' 'x86_64')
+arch=('i386' 'x86_64' 'aarch64')
 url="https://gitlab.com/kvm-unit-tests/kvm-unit-tests"
 license=('GPL')
 source=("https://gitlab.com/kvm-unit-tests/kvm-unit-tests.git")
