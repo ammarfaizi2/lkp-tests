@@ -10,7 +10,7 @@ sync_distro_sources()
 
 	case $distro in
 	debian|ubuntu) apt-get update ;;
-	fedora)
+	fedora|amazon_linux)
 		if [ $distro_version -ge 22 ]; then
 			dnf update
 		else

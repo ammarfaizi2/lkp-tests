@@ -282,6 +282,28 @@ install_base_support()
 {
 	install_packages "lkp" "$distro"
 
+	if [ "$distro" = "amazon_linux" -a "$_system_version" = "2" -a "$(gem --version)" != "3.2.3" ]; then
+		# Install a newer ruby on Amazon Linux 2.
+		yum remove ruby -y
+		curl -sSL https://rvm.io/mpapis.asc | gpg2 --import -
+		curl -sSL https://rvm.io/pkuczynski.asc | gpg2 --import -
+		curl -sSL https://get.rvm.io | bash -s stable
+		source /etc/profile.d/rvm.sh
+		rvm install ruby-2.6.10
+		gem update --system 3.2.3
+
+                # Install fakeroot.
+		(
+			git clone https://github.com/mackyle/fakeroot
+			cd fakeroot
+			libtoolize && aclocal && autoconf && autoheader && automake --add-missing || exit
+			./configure --prefix /usr
+			make && make install
+                        cd ..
+                        rm -rf fakeroot
+		)
+	fi
+
 	if [ -n "$CHINA" ]; then
 		gem install bundler --clear-sources -s https://gems.ruby-china.com/
 		bundle_install_china
