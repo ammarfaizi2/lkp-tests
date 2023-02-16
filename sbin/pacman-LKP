@@ -103,7 +103,7 @@ distro_pkg_format() {
 	case $DISTRO in
 		debian|ubuntu)
 			echo deb;;
-		fedora|centos)
+		fedora|centos|amazon_linux)
 			echo rpm;;
 		*)
 			echo other;;

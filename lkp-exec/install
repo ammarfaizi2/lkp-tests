@@ -172,7 +172,7 @@ verify_install() {
 	case $DISTRO in
 		debian|ubuntu)
 			[[ ! $(dpkg -V "$pkg" 2>&1) ]] || [[ ! $(dpkg -V "$pkg-lkp" 2>&1) ]];;
-		centos|fedora)
+		centos|fedora|amazon_linux)
 			[[ ! $(rpm -V "$pkg" 2>&1) ]] || [[ ! $(rpm -V "$pkg-lkp" 2>&1) ]];;
 		*)
 			return 1;;
@@ -264,7 +264,7 @@ build_install_benchmarks() {
 				return 1
 			}
 			;;
-		fedora)
+		fedora|amazon_linux)
 			BUILD_DIR=$(get_build_dir $script)
 			local rpm_pkg=$BUILD_DIR/$pkg_name/RPMS/$pkg_name.$arch.rpm
 			[ -f $rpm_pkg ] || return

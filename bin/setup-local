@@ -134,7 +134,7 @@ def install_benchmarks(script, distro)
     case distro
     when 'debian', 'ubuntu'
       system "dpkg -i /tmp/#{pkg_name}.deb"
-    when 'fedora'
+    when 'fedora', 'amazon_linux'
       system "rpm -ivh --replacepkgs /tmp/#{pkg_name}/RPMS/#{pkg_name}.#{arch}.rpm"
     else
       puts "Just make /lkp/benchmarks/#{script}-#{arch}.cgz"

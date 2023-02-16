@@ -133,7 +133,7 @@ pack_pkg()
 	case $distro in
 		debian|ubuntu)
 			pack_deb ;;
-		fedora)
+		fedora|amazon_linux)
 			pack_rpm ;;
 		*)
 			pack ;;
